@@ -1,0 +1,16 @@
+{% load static %}
+<div class="row mb-2" id="encabezado">
+     <div class="col-8" id="titulo">
+          <h1>SUPERMARKET</h1>
+          <div class="col-12" id="nombreUsuario">
+               {% if user.id is None %}
+                    <h6>visitante</h6>
+               {% else %}
+                    <h6>{{ user.first_name }} - {{ user.rol }}</h6>
+               {% endif %}
+          </div>
+     </div>
+     <div class="col-4">
+          <img class="d-block mx-auto" src="{% static 'img/supermarket.png' %}" alt="">
+     </div>
+</div>
