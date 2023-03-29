@@ -153,7 +153,9 @@ def pagarCarrito(request):
      regUsuario = request.user 
      nombreUsuario = str(regUsuario) 
      context['nombre'] = nombreUsuario 
-     correo = regUsuario.email 
+     correo = regUsuario.email
+     print("-------------------------------------")
+     print(correo) 
      
      #--- MODULO PARA ENVIO DE CORREO 
      mail_subject = 'Factura de compra' 
@@ -162,7 +164,9 @@ def pagarCarrito(request):
      
      send_email = EmailMessage(mail_subject, body, to= to_email ) 
      send_email.content_subtype = 'html' 
-     send_email.send() 
+     send_email.send()
+     
+     print(to_email) 
      #---FIN MODULO PARA ENVIO DE CORREO DE CONFIRMACION 
      
      # sacar productos del carrito 
