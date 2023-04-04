@@ -24,7 +24,7 @@ onchange="cambiarCantidad({{prod.id}})"
                                         value="{{prod.cantidad}}" min="1" style="width: 80px;" data-
 preciou="{{prod.valUnit}}"></th> 
 
-                    <td><img src="/media/iconos/{{prod.imgPeque}}" alt="X"></td> 
+                    <td><img src="{{prod.imgPeque.url}}" alt="X"></td> 
                     <td>{{ prod.nombre }}</td> 
                     <td>{{prod.valUnit}}/{{prod.unidad}}</td> 
                     <td id="total_{{prod.id}}">${{prod.total}}</td> 
